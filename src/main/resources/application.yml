@@ -45,7 +45,7 @@ spring:
           extract-images: false
 
 server:
-  port: 8080
+  port: 8085
 
 logging:
   level:
