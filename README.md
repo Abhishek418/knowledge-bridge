@@ -6,7 +6,7 @@ A Spring Boot service leveraging **Spring AI** for AI-native development.
 
 - **Java 21+**
 - **Spring Boot 3.x**
-- **Spring AI** - For seamless AI/LLM integration
+- **Spring AI** - For seamless AI/LLM integrationß
 - **Gradle** - Build tool
 
 
@@ -20,7 +20,7 @@ This service is designed for AI-native development with Spring AI, supporting:
 - **RAG (Retrieval Augmented Generation)** - Enhanced context-aware responses
 - **Function Calling** - Tool/function execution with LLMs
 - **Structured Output** - Type-safe AI responses
-
+HI 
 ## Project Structure
 
 ```

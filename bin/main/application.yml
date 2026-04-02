@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: knowledge-bridge
+
+  # Redis Configuration for Vector Store
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: ""
+
+  # Spring AI Configuration
+  ai:
+    # OpenAI Configuration
+    openai:
+      api-key: ${OPENAI_API_KEY:sk-demo-key-replace-with-real-key}
+      base-url: https://api.openai.com
+      
+      # Chat Model Configuration
+      chat:
+        enabled: true
+        options:
+          model: gpt-4o
+          temperature: 0.7
+          max-tokens: 2048
+      
+      # Embedding Model Configuration
+      embedding:
+        enabled: true
+        options:
+          model: text-embedding-3-small
+
+    # Vector Store Configuration (Redis)
+    vectorstore:
+      redis:
+        index: knowledge-bridge-index
+        prefix: "doc:"
+        initialize-schema: true
+
+    # Document Reader Configuration
+    document:
+      reader:
+        pdf:
+          pages-per-document: 1
+          extract-images: false
+
+# Server Configuration
+server:
+  port: 8080
+
+# Logging Configuration
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    com.syf.chatbot: DEBUG
