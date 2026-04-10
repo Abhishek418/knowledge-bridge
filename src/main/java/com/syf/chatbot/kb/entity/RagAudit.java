@@ -4,16 +4,15 @@ import com.syf.chatbot.kb.dto.LexFulfillmentRequest;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
+
 import java.time.Instant;
 import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "rag_audit_entity")
-public class RagAuditEntity {
+@Table(name = "rag_audit")
+public class RagAudit {
 
     @Id
     @Column(name = "rag_audit_id")

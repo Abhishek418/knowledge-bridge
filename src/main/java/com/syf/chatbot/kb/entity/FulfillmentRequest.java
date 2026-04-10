@@ -9,8 +9,8 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "fulfillment_request_entity")
-public class FulfillmentRequestEntity {
+@Table(name = "fulfillment_request")
+public class FulfillmentRequest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -36,6 +36,6 @@ public class FulfillmentRequestEntity {
 
     @OneToOne(mappedBy = "fulfillmentRequest", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @PrimaryKeyJoinColumn
-    private RagAuditEntity ragAudit;
+    private RagAudit ragAudit;
 
 }
